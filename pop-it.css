@@ -1,0 +1,182 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    color: rgb(41, 41, 41);
+    position: relative;
+    font-family: Helvetica Neue, sans-serif;
+}
+
+.header {
+    background-color: #ffbf69;
+    padding: 40px 100px;
+    @media screen and (max-width: 650px) {
+        padding: 40px 20px;
+    }
+}
+
+.nav-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 20px;
+
+a {
+    color: rgb(41, 41, 41);
+    width: fit-content;
+    text-align: center;
+}
+@media screen and (max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: fit-content;
+    margin: auto;
+}
+@media screen and (max-width: 350px) {
+    align-items: start;
+}
+}
+.nav-links {
+    display: flex;
+    gap: 40px;
+    @media screen and (max-width: 350px) {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+.section-top {
+    background-color: #ffbf69;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 160px 20px 100px;
+    margin: auto;
+
+@media screen and (max-width: 1090px) {
+    /* flex-direction: column; */
+    padding: 20px 50px;
+    gap: 20px;
+}
+@media screen and (max-width: 860px) {
+    flex-direction: column;
+}
+}
+
+.pop-it-logo {
+    height: 40vh;
+    object-fit: cover;
+    @media screen and (max-width: 410px) {
+       width: 100%;
+       height: auto;
+    }
+}
+
+.main-title {
+    font-size: clamp(3rem, 0.6429rem + 7.619vw, 7.5rem);
+    color: #ffffff;
+    text-wrap: nowrap;
+}
+
+.description-of-the-toy {
+    color: #ffffff;
+    font-size: clamp(1rem, 0.8143rem + 0.7619vw, 1.5rem);
+    font-weight: 150;
+}
+
+.bye-default {
+    background-color: #cbf3f0;
+    color: #252820;
+    border: none;
+    padding: 6px 24px;
+    font-size: 24px;
+    width: 150px;
+}
+
+.main-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* padding: 0 10px; */
+}
+
+.section-bottom {
+    background-color: #cbf3f0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 100px;
+    @media screen and (max-width: 663px) {
+        padding: 100px 10px;
+    }
+}
+
+.section-bottom-title {
+    font-size: 26px;
+    text-align: center;
+}
+
+.goods-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.shipment-logo {
+    width: 200px;
+    height: 200px;
+}
+
+.shipment-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-bye {
+    background-color: #ffbf69;
+    font-size: 16px;
+    color: #210708;
+    padding: 6px 14px;
+    border: none;
+}
+
+.shipment-title {
+    color: #1d150a;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.footer {
+    background-color: #333333;
+    padding: 20px 0;
+}
+
+.footer-company-link {
+    color: #f4f8f5;
+    font-size: 16px;
+}
+
+.footer-link {
+    color: #f4f8f5;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-around;
+    @media screen and (max-width: 530px) {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+}
