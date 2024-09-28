@@ -6,13 +6,42 @@
 a {
     text-decoration: none;
 }
-
+button{
+    cursor: pointer;
+}
 body {
     color: rgb(41, 41, 41);
     position: relative;
     font-family: Helvetica Neue, sans-serif;
+    max-width: 1440px;
+    margin: auto;
 }
+section:first-of-type {
+    background-color: #ffbf69;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 160px 20px 100px;
+    margin: auto;
 
+@media screen and (max-width: 1090px) {
+    padding: 0 50px 20px;
+    gap: 20px;
+}
+@media screen and (max-width: 860px) {
+    flex-direction: column;
+}
+}
+section:nth-of-type(2) {
+    background-color: #cbf3f0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 100px;
+    @media screen and (max-width: 663px) {
+        padding: 100px 10px;
+    }
+}
 .header {
     background-color: #ffbf69;
     padding: 40px 100px;
@@ -27,21 +56,21 @@ body {
     justify-content: space-between;
     font-size: 20px;
 
-a {
-    color: rgb(41, 41, 41);
-    width: fit-content;
-    text-align: center;
-}
-@media screen and (max-width: 500px) {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    width: fit-content;
-    margin: auto;
-}
-@media screen and (max-width: 350px) {
-    align-items: start;
-}
+    a {
+       color: rgb(41, 41, 41);
+       width: fit-content;
+       text-align: center;
+    }
+    @media screen and (max-width: 500px) {
+       flex-direction: column;
+       align-items: center;
+       gap: 16px;
+       width: fit-content;
+       margin: auto;
+    }
+    @media screen and (max-width: 350px) {
+       align-items: start;
+    }
 }
 .nav-links {
     display: flex;
@@ -51,28 +80,12 @@ a {
         align-items: start;
     }
 }
-
-.section-top {
-    background-color: #ffbf69;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 160px 20px 100px;
-    margin: auto;
-
-@media screen and (max-width: 1090px) {
-    /* flex-direction: column; */
-    padding: 20px 50px;
-    gap: 20px;
-}
-@media screen and (max-width: 860px) {
-    flex-direction: column;
-}
-}
-
 .pop-it-logo {
-    height: 40vh;
+    height: 50vh;
     object-fit: cover;
+    @media screen and (max-width: 1200px) {
+        max-height: 40vh;
+     }
     @media screen and (max-width: 410px) {
        width: 100%;
        height: auto;
@@ -80,7 +93,7 @@ a {
 }
 
 .main-title {
-    font-size: clamp(3rem, 0.6429rem + 7.619vw, 7.5rem);
+    font-size: clamp(2.5rem, -3.0882rem + 11.7647vw, 7.5rem);
     color: #ffffff;
     text-wrap: nowrap;
 }
@@ -88,7 +101,8 @@ a {
 .description-of-the-toy {
     color: #ffffff;
     font-size: clamp(1rem, 0.8143rem + 0.7619vw, 1.5rem);
-    font-weight: 150;
+    font-weight: 400;
+    max-width: 500px;
 }
 
 .bye-default {
@@ -104,18 +118,6 @@ a {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    /* padding: 0 10px; */
-}
-
-.section-bottom {
-    background-color: #cbf3f0;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 100px;
-    @media screen and (max-width: 663px) {
-        padding: 100px 10px;
-    }
 }
 
 .section-bottom-title {
@@ -124,15 +126,18 @@ a {
 }
 
 .goods-container {
-    display: flex;
+    display: grid;
     justify-content: space-around;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+    @media screen and (max-width: 400px) {
+        grid-template-columns: auto;
+    }
 }
 
 .shipment-logo {
-    width: 200px;
-    height: 200px;
+    max-width: 200px;
+    max-height: 200px;
 }
 
 .shipment-container {
@@ -153,8 +158,8 @@ a {
 
 .shipment-title {
     color: #1d150a;
-    font-size: 20px;
-    font-weight: 200;
+    font-size: clamp(1rem, 0.4412rem + 1.1765vw, 1.5rem);
+    font-weight: 550;
 }
 
 .footer {
@@ -174,6 +179,7 @@ a {
 .footer-nav {
     display: flex;
     justify-content: space-around;
+
     @media screen and (max-width: 530px) {
         flex-direction: column;
         gap: 16px;
